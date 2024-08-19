@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #dfe6ed;
+    padding-top: 82px;
+}
+
+.sidebar .btn {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    display: flex;
+    flex: 1fr 1fr;
+    color: #555;
+    text-align: center;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-row1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-row1 input,
+.form-row1 select {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #34c6ac;
+}
+
+.form-row input,
+.form-row select {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.placeholder-image {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+
+.submit-btn {
+    background-color: #e47c4f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 24%;
+    margin: 0 auto;
+    display: block;
+}

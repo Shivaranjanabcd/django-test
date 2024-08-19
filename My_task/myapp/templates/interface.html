@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User - Task List</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/interface.css' %}" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <button class="btn">Home</button>
+      <button class="btn">Profile</button>
+      <a href="{% url 'task' %}">
+        <button class="btn">Task</button>
+      </a>
+      <a href="{% url 'logout' %}">
+        <button class="btn">Logout</button>
+      </a>
+    </div>
+    <div class="main-content1">
+      <div class="heading">
+        <h1>Hello {{user.username}}</h1>
+        <h1>{{points}} points</h1>
+      </div>
+      {% for data in data %}
+      <div class="task-list">
+        <div class="task">
+          <img src="{{data.image.url}}" alt="Facebook Logo" class="app-icon" />
+          <div class="for_block">
+            <span>{{data.name}}</span>
+            <a href="{% url 'details' data.id %}">View in Detail</a>
+          </div>
+          <button class="btn">{{data.point}} POINTS</button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
