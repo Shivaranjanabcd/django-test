@@ -38,10 +38,14 @@
   <body>
     {% if user.is_superuser %}
     <div class="sidebar">
+      <a href="{% url 'index' %}">
       <button class="btn">Home</button>
-      <button class="btn">Add Apps</button>
+    </a>
     </div>
-    <div class="main-content">
+    
+      <div class="main-content">
+      
+      
       <h1>Hello Admin</h1>
       <div class="form-container">
         <!-- Begin Form -->

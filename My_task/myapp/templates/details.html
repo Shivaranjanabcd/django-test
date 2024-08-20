@@ -41,17 +41,27 @@
   </head>
   <body>
     <div class="sidebar">
-      <button class="btn">Home</button>
-      <button class="btn">Profile</button>
-      <button class="btn">Points</button>
-      <button class="btn">Task</button>
-      <button class="btn">Logout</button>
+      {% if user.is_superuser %}
+      <a href="{% url 'index' %}">
+        <button class="btn">Home</button>
+      </a>
+      {% endif %}
+      <a href="{% url 'task' %}">
+        <button class="btn">Task</button>
+      </a>
+      <a href="{% url 'logout' %}">
+        <button class="btn">Logout</button>
+      </a>
     </div>
     <div class="main-content2">
       <h1>Hello John</h1>
       <div class="task-list1">
         <div class="task">
-          <img src="{{task_detail.image.url}}" alt="Facebook Logo" class="app-icon" />
+          <img
+            src="{{task_detail.image.url}}"
+            alt="Facebook Logo"
+            class="app-icon"
+          />
           <div class="for_block">
             <span>{{task_detail.name}}</span>
             <a href="{{task_detail.link}}">{{task_detail.link}}</a>

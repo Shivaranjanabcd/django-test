@@ -16,7 +16,7 @@ def index(request):
     return render(request,"index.html",{})
 def interface(request):
     data = app.objects.all()
-    points = user_task.objects.get(user=request.user)
+    points,created = user_task.objects.get_or_create(user=request.user)
     return render(request,"interface.html",{"data":data,"points":points.user_point})
 
 def details(request,task_id):
